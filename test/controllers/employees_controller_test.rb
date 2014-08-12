@@ -18,7 +18,7 @@ class EmployeesControllerTest < ActionController::TestCase
 
   test "should create employee" do
     assert_difference('Employee.count') do
-      post :create, employee: { age: @employee.age, email: @employee.email, employee_id: @employee.employee_id, first_name: @employee.first_name, last_name: @employee.last_name, pan_number: @employee.pan_number, passport_no: @employee.passport_no, string: @employee.string }
+      post :create, employee: { age: @employee.age, email: @employee.email, employee_id: @employee.employee_id, first_name: @employee.first_name, last_name: @employee.last_name, pan_number: @employee.pan_number, passport_no: @employee.passport_no }
     end
 
     assert_redirected_to employee_path(assigns(:employee))
@@ -35,7 +35,7 @@ class EmployeesControllerTest < ActionController::TestCase
   end
 
   test "should update employee" do
-    patch :update, id: @employee, employee: { age: @employee.age, email: @employee.email, employee_id: @employee.employee_id, first_name: @employee.first_name, last_name: @employee.last_name, pan_number: @employee.pan_number, passport_no: @employee.passport_no, string: @employee.string }
+    patch :update, id: @employee, employee: { age: @employee.age, email: @employee.email, employee_id: @employee.employee_id, first_name: @employee.first_name, last_name: @employee.last_name, pan_number: @employee.pan_number, passport_no: @employee.passport_no }
     assert_redirected_to employee_path(assigns(:employee))
   end
 
